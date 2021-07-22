@@ -49,7 +49,7 @@ public class EventHandler implements RequestHandler<ScheduledEvent, String> {
         final LambdaLogger logger = context.getLogger();
         try {
             processShipmentUpdates(logger);
-            logger.log("success");
+            logger.log("this was completed successfully");
             return "SUCCESS";
         } catch (final Exception ex) {
             logger.log(String.format("Failed to process shipment Updates in %s due to %s", scheduledEvent.getAccount(), ex.getMessage()));
